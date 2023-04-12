@@ -1,0 +1,414 @@
+:root {
+  --ff-main: "Barlow", sans-serif;
+  --ff-cond: "Barlow Condensed", sans-serif;
+  --ff-fancy: "Libre Baskerville", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background: #1414141f;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+nav {
+  background: #d9d9d9a3;
+  height: 80px;
+  max-width: 100%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-transform: uppercase;
+  font-family: var(--ff-cond);
+  font-weight: 500;
+  font-size: 24px;
+  border-radius: 4%;
+  padding: 5px;
+  width: auto;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #48533d;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #48533d;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+/* NAVBAR RESPONSIVE */
+
+@media (max-width: 700px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    max-width: 50%;
+    height: fit-content;
+    background: #48533dc1;
+    top: -100%;
+    right: 0;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+    padding: 3px;
+    border-bottom: 1px solid #48533d;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: white;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: white;
+  }
+
+  .checkbtn:checked ~ i {
+    color: white;
+    background-color: #48533d;
+  }
+
+  #check:checked ~ ul {
+    top: 80px;
+  }
+}
+
+/* HERO */
+
+.landing {
+  height: 100vh;
+  width: 100%;
+  background: url(assets/bg-dog.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  position: absolute;
+  bottom: 70px;
+  margin-left: 7rem;
+  color: black;
+}
+
+h2 {
+  font-family: var(--ff-cond);
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: var(--ff-fancy);
+  font-size: 96px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: var(--ff-cond);
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  margin-left: 10rem;
+  background: #ffffffb9;
+}
+
+button:hover {
+  background-color: #859757;
+  color: white;
+}
+
+.quote {
+  background-color: #859757;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+#quote {
+  font-family: var(--ff-main);
+  font-style: italic;
+  color: white;
+  font-size: 24px;
+  padding: 0 80px;
+  margin-bottom: 10px;
+}
+
+#author {
+  text-align: right;
+  color: black;
+  text-transform: uppercase;
+  font-family: var(--ff-main);
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  max-width: 80%;
+}
+
+.article {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.photo {
+  max-width: 300px;
+  float: right;
+  margin: 10px;
+}
+
+.title {
+  font-family: var(--ff-cond);
+  font-weight: 500;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.article-text {
+  font-family: var(--ff-cond);
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+
+.welcome {
+  margin: 40px 0;
+  text-align: center;
+  font-family: var(--ff-main);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+#btn-bottom {
+  font-family: var(--ff-cond);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #859757;
+  color: white;
+  position: relative;
+  margin: 20px 0 auto;
+}
+
+#btn-bottom:hover {
+  background: white;
+  color: #859757;
+  transition: 0.2s;
+}
+
+#img-bottom {
+  margin-top: 50px;
+  max-height: 40%;
+  object-fit: cover;
+  object-position: 20% 50%;
+  width: 100vw;
+}
+
+/* MAIN RESPONSIVE */
+
+@media (max-width: 700px) {
+  .text {
+    position: absolute;
+    bottom: 4.375rem;
+    margin-left: 3rem;
+    color: black;
+  }
+
+  h2 {
+    font-size: 3.625rem;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 4.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin: auto;
+  }
+
+  #quote {
+    font-family: var(--ff-main);
+    font-style: italic;
+    color: white;
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  #author {
+    font-size: 1.25rem;
+  }
+
+  .photo {
+    max-width: 180px;
+    margin-bottom: 3px;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 2.625rem;
+    margin-bottom: 20px;
+  }
+
+  .article-text {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+
+  .welcome {
+    margin: 20px 0;
+    font-size: 1.75rem;
+    font-weight: 300;
+  }
+
+  #img-bottom {
+    margin-top: 30px;
+    max-height: 20%;
+    object-fit: cover;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .text {
+    position: absolute;
+    bottom: 50px;
+    margin-left: 1rem;
+    color: black;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  #quote {
+    font-size: 16px;
+  }
+
+  #author {
+    font-size: 12px;
+  }
+}
+
+/* FOOTER */
+
+footer{
+  background-color: #859757;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+footer li{
+  font-family: var(--ff-main);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer .name{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+footer i{
+  color: white;
+  padding: 10px 5px;
+}
+
+footer i:hover{
+  color: #48533d;
+}
+
+footer a{
+  padding: 8px;
+  border-radius: 5px;
+  color: black;
+}
+
+footer a:hover{
+  background-color: #48533d;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+footer .menu li{
+  margin-bottom: 10px;
+}
+
+footer .menu li:first-child{
+  margin-top: 1.825rem;
+}
+
+.menu li{
+  color: white;
+}
