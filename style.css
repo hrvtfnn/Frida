@@ -15,7 +15,7 @@
 body {
   background-image: url(assets/bg-png.png);
   background-size: 100% auto;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   max-width: 100%;
   overflow-x: hidden;
@@ -32,7 +32,7 @@ nav {
 
 nav ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
 nav ul li {
@@ -48,7 +48,7 @@ nav ul li a {
   font-weight: 500;
   font-size: 24px;
   border-radius: 4%;
-  padding: 5px;
+  padding: 10px;
   width: auto;
 }
 
@@ -79,20 +79,22 @@ nav ul li a:hover {
   .checkbtn {
     display: block;
   }
-  ul {
+  nav ul {
     position: fixed;
-    max-width: 100%;
     height: auto;
-    background: #48533dc1;
+    background-color: #a2ab89bd;
     top: -100%;
     right: 0;
     text-align: center;
     transition: all 0.5s;
+    z-index: 10;
+    padding: 0 10px;
   }
   nav ul li {
     display: block;
     margin: 5px;
-    border-bottom: 1px solid #48533d;
+    border-bottom: 2px solid #48533d;
+    width: 100%;
   }
 
   nav ul li:last-child {
@@ -163,6 +165,7 @@ button {
   position: absolute;
   margin-left: 10rem;
   background: #ffffffb9;
+  cursor: pointer;
 }
 
 button:hover {
@@ -254,7 +257,7 @@ button:hover {
 
 #img-bottom {
   margin-top: 50px;
-  max-height: 70%;
+  max-height: 50%;
   object-fit: cover;
   object-position: 10% 20%;
   width: 100vw;
@@ -332,8 +335,8 @@ button:hover {
     margin-top: 30px;
     max-height: 20%;
     object-fit: cover;
-    max-width: 100vw;
   }
+
 }
 
 /* FOOTER */
@@ -341,12 +344,12 @@ button:hover {
 #footer{
   background-color: #859757;
   display: flex;
-  position: sticky;
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
   flex-wrap: wrap;
-  height: auto;
+  height: max-content;
+  padding-bottom: 20px;
 }
 
 #footer li{
@@ -358,7 +361,8 @@ button:hover {
 #footer .name{
   font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 20px;
 }
 
 #footer i{
@@ -391,15 +395,20 @@ button:hover {
   margin-top: 1.825rem;
 }
 
-.menu li{
-  color: white;
-}
-
 .follow{
   font-family: var(--ff-main);
   font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 20px;
+}
+
+.follow i{
+  padding-bottom: 20px;
+}
+
+.social-contact{
+  text-align: center;
 }
 
   /* SMALL RESPONSIVE */
@@ -458,22 +467,33 @@ button:hover {
     font-size: 0.75rem;
   }
 
-  #footer {
-    display: block;
-  }
-  
-  #footer .contact {
-    margin-bottom: 1.5rem;
-  }
-  
-  #footer .menu {
-    margin-bottom: 1.5rem;
-  }
-  
-  #footer .social-contact {
+  #footer{
+    min-height: fit-content;
+    width: 100vw;
     text-align: center;
   }
 
+  .footer-contact, .footer-contact i{
+    margin: auto;
+    padding: 0;
+    line-height: 15px;
+    font-size: 15px;
+  }
+
+  .footer-contact li{
+    border-bottom: #48533d 0.1px solid;
+    width: 100vw;
+    padding: 5px;
+  }
+
+  .footer-contact li:first-child,
+  .footer-contact li:last-child{
+    border-bottom: none;
+  }
+
+  .social-contact, .menu{
+    display:none 
+  }
 }
 
 /* ABOUT.HTML */
@@ -506,4 +526,5 @@ button:hover {
 .flex-button{
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
