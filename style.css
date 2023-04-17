@@ -85,9 +85,9 @@ nav ul li a:hover {
     background-color: #a2ab89bd;
     top: -100%;
     right: 0;
+    margin-right: 0;
     text-align: center;
     transition: all 0.5s;
-    z-index: 10;
     padding: 0 10px;
   }
   nav ul li {
@@ -106,12 +106,12 @@ nav ul li a:hover {
     color: white;
   }
   nav ul li a.active,
-nav ul li a:hover {
-  background-color: transparent;
-  color: white;
-  cursor: pointer;
-  transition: 0.5s;
-}
+  nav ul li a:hover {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+  }
 
   #check:checked ~ ul {
     top: 80px;
@@ -126,7 +126,7 @@ nav ul li a:hover {
   background: url(assets/img4.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-  background-position-y: 25%; 
+  background-position-y: 25%;
   background-attachment: fixed;
 }
 
@@ -135,7 +135,6 @@ nav ul li a:hover {
   bottom: 50px;
   margin-left: 7rem;
   color: #e9ede5;
-
 }
 
 h2 {
@@ -230,7 +229,7 @@ button:hover {
   margin-top: 5px;
 }
 
-.highlighted{
+.highlighted {
   background-color: #a2ab89;
   padding: 20px;
 }
@@ -266,7 +265,6 @@ button:hover {
 /* MAIN RESPONSIVE */
 
 @media (max-width: 770px) {
-
   .landing {
     background-position: left;
     background-size: cover;
@@ -336,12 +334,11 @@ button:hover {
     max-height: 20%;
     object-fit: cover;
   }
-
 }
 
 /* FOOTER */
 
-#footer{
+#footer {
   background-color: #859757;
   display: flex;
   align-items: center;
@@ -352,50 +349,50 @@ button:hover {
   padding-bottom: 20px;
 }
 
-#footer li{
+#footer li {
   font-family: var(--ff-main);
   font-size: 1rem;
   font-weight: 300;
 }
 
-#footer .name{
+#footer .name {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   margin-top: 20px;
 }
 
-#footer i{
+#footer i {
   color: white;
   padding: 10px 5px;
 }
 
-#footer i:hover{
+#footer i:hover {
   color: #48533d;
 }
 
-#footer a{
+#footer a {
   padding: 8px;
   border-radius: 5px;
   color: black;
 }
 
-#footer a:hover{
+#footer a:hover {
   background-color: #48533d;
   color: white;
   cursor: pointer;
   transition: 0.5s;
 }
 
-#footer .menu li{
+#footer .menu li {
   margin-bottom: 10px;
 }
 
-#footer .menu li:first-child{
+#footer .menu li:first-child {
   margin-top: 1.825rem;
 }
 
-.follow{
+.follow {
   font-family: var(--ff-main);
   font-weight: bold;
   font-size: 1.2rem;
@@ -403,18 +400,17 @@ button:hover {
   margin-top: 20px;
 }
 
-.follow i{
+.follow i {
   padding-bottom: 20px;
 }
 
-.social-contact{
+.social-contact {
   text-align: center;
 }
 
-  /* SMALL RESPONSIVE */
+/* SMALL RESPONSIVE */
 
 @media (max-width: 400px) {
-
   .landing {
     background-position: left;
     background-size: cover;
@@ -444,7 +440,7 @@ button:hover {
     margin-left: 40px;
   }
 
-  .article-title{
+  .article-title {
     font-size: 2.5rem;
   }
 
@@ -455,7 +451,7 @@ button:hover {
     margin-bottom: 10px;
   }
 
-  .article-text:nth-child(4){
+  .article-text:nth-child(4) {
     text-align: center;
   }
 
@@ -467,63 +463,65 @@ button:hover {
     font-size: 0.75rem;
   }
 
-  #footer{
+  #footer {
     min-height: fit-content;
     width: 100vw;
     text-align: center;
   }
 
-  .footer-contact, .footer-contact i{
+  .footer-contact,
+  .footer-contact i {
     margin: auto;
     padding: 0;
     line-height: 15px;
     font-size: 15px;
   }
 
-  .footer-contact li{
+  .footer-contact li {
     border-bottom: #48533d 0.1px solid;
     width: 100vw;
     padding: 5px;
   }
 
   .footer-contact li:first-child,
-  .footer-contact li:last-child{
+  .footer-contact li:last-child {
     border-bottom: none;
   }
 
-  .social-contact, .menu{
-    display:none 
+  .social-contact,
+  .menu {
+    display: none;
   }
 }
 
 /* ABOUT.HTML */
-.article-title{
+.article-title {
   text-align: center;
 }
 
-.about-img-one{
+.about-img-one {
   max-width: 300px;
   margin: 10px;
   float: left;
 }
 
-.about-img-two{
+.about-img-two {
   max-width: 300px;
   margin: 10px;
   float: right;
 }
 
-.about-page .article{
+.about-page .article {
   text-align: left;
 }
 
-#last-sentence{
+#last-sentence {
   font-size: 1.4rem;
   text-align: center;
   padding: 5px;
 }
 
-.flex-button{
+.flex-button {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
